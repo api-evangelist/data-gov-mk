@@ -1,0 +1,56 @@
+aid: data-gov-mk
+name: data.gov.mk
+description: >-
+  data.gov.mk is the national government open-data portal for North Macedonia, operated by the Ministry
+  of Digital Transformation. It runs CKAN and exposes the standard CKAN Action API over roughly 280+
+  datasets from 50+ public institutions, supporting programmatic dataset search, metadata retrieval, and
+  resource access, plus DCAT exports (N3, TTL, XML, JSON-LD).
+kind: government
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/data-gov-mk/refs/heads/main/apis.yml
+tags:
+  - Open Data
+  - CKAN
+  - Data Catalog
+  - DCAT
+  - Government Data
+  - National Government
+  - North Macedonia
+  - Europe
+created: '2026-06-23'
+modified: '2026-06-23'
+specificationVersion: '0.19'
+apis:
+  - aid: data-gov-mk:catalog
+    name: data.gov.mk CKAN Action API
+    description: >-
+      CKAN Action API for data.gov.mk, a consistent JSON-over-HTTP interface over the national catalog.
+      Standard actions include package_search, package_show, package_list, organization_list, group_list,
+      and tag_list. Base URL https://data.gov.mk/api/3/action/. DCAT exports available in N3, TTL, XML,
+      and JSON-LD.
+    humanURL: https://data.gov.mk/en/about
+    baseURL: https://data.gov.mk/api/3/action
+    tags:
+      - CKAN
+      - Action API
+      - Open Data
+      - Catalog
+      - REST
+      - JSON
+    properties:
+      - type: Documentation
+        url: https://docs.ckan.org/en/latest/api/
+      - type: Website
+        url: https://data.gov.mk/
+      - type: x-api-endpoint
+        url: https://data.gov.mk/api/3/action/package_search
+common:
+  - type: Website
+    url: https://data.gov.mk/
+  - type: Documentation
+    url: https://docs.ckan.org/en/latest/api/
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

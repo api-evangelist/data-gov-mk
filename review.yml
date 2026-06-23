@@ -1,0 +1,22 @@
+name: data.gov.mk
+description: data.gov.mk CKAN open-data API verification for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/data-gov-mk/refs/heads/main/review.yml
+created: '2026-06-23'
+modified: '2026-06-23'
+reviews:
+  - date: '2026-06-23'
+    rating: 3
+    summary: >-
+      data.gov.mk is North Macedonia's national open-data portal, run by the Ministry of Digital
+      Transformation on CKAN, with ~280+ datasets from 50+ institutions and DCAT exports (N3, TTL, XML,
+      JSON-LD). The platform and /api/3/action endpoint surface are confirmed via the Dateno registry
+      and the Ministry, but every direct connection from this environment timed out at the TCP level
+      (HTTP 000) — a pattern consistent with a geographic/IP firewall block rather than an outage, since
+      search engines index it as live. Live JSON response and exact dataset count not confirmed here.
+    endpoints:
+      - url: https://data.gov.mk/api/3/action/package_search
+        status: unreachable
+        note: Standard CKAN endpoint; documented via Dateno but unreachable (timeout) from this environment.
+      - url: https://data.gov.mk/
+        status: unreachable
+        note: Portal home; connection timed out (likely geo/IP block).
